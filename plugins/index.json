@@ -54,19 +54,75 @@
     {
       "id": "radio",
       "name": "Internetradio",
-      "version": 1,
+      "version": 2,
       "script": "radio.js",
       "description": "Tausende Radiosender weltweit über radio-browser.info – inkl. tamilischer Sender.",
       "settings": [
         {
           "key": "country",
-          "label": "Land (Ländercode, z.B. CH, DE, IN)",
-          "default": "CH"
+          "label": "Land für «Beliebte Sender»",
+          "type": "choice",
+          "default": "CH",
+          "hint": "Zeigt die beliebtesten Radiosender dieses Landes.",
+          "options": [
+            {
+              "value": "CH",
+              "label": "Schweiz"
+            },
+            {
+              "value": "DE",
+              "label": "Deutschland"
+            },
+            {
+              "value": "AT",
+              "label": "Österreich"
+            },
+            {
+              "value": "IN",
+              "label": "Indien"
+            },
+            {
+              "value": "LK",
+              "label": "Sri Lanka"
+            },
+            {
+              "value": "GB",
+              "label": "Grossbritannien"
+            }
+          ]
         },
         {
           "key": "tag",
-          "label": "Stichwort für eigene Reihe (z.B. tamil, jazz)",
-          "default": "tamil"
+          "label": "Eigene Reihe",
+          "type": "choice",
+          "default": "tamil",
+          "hint": "Zusätzliche Reihe mit Sendern zu diesem Thema.",
+          "options": [
+            {
+              "value": "tamil",
+              "label": "Tamil"
+            },
+            {
+              "value": "news",
+              "label": "News"
+            },
+            {
+              "value": "pop",
+              "label": "Pop"
+            },
+            {
+              "value": "rock",
+              "label": "Rock"
+            },
+            {
+              "value": "jazz",
+              "label": "Jazz"
+            },
+            {
+              "value": "classical",
+              "label": "Klassik"
+            }
+          ]
         }
       ],
       "sha256": "ca2a837724f25c6c7fa7267034c87d9f98efe4ea1fd4ec9b9eacfac09aec206a"
@@ -122,14 +178,30 @@
     {
       "id": "xstream",
       "name": "xStream",
-      "version": 1,
+      "version": 2,
       "script": "xstream.js",
       "description": "Netzkino und Internet Archive durchsuchen und kompatible Videos in TV-One abspielen.",
       "settings": [
         {
           "key": "netzkinoCountry",
-          "label": "Netzkino-Ländercode (z.B. CH, DE, AT)",
-          "default": "CH"
+          "label": "Netzkino-Land",
+          "type": "choice",
+          "default": "CH",
+          "hint": "Bestimmt, welche Netzkino-Filme angezeigt werden. Abspielen geht nur im gewählten Land.",
+          "options": [
+            {
+              "value": "CH",
+              "label": "Schweiz"
+            },
+            {
+              "value": "DE",
+              "label": "Deutschland"
+            },
+            {
+              "value": "AT",
+              "label": "Österreich"
+            }
+          ]
         }
       ],
       "sha256": "66454a5ba63834a2d256ce9889a59963d3f048aeed52120cfdb9e02de9d56b7c"
