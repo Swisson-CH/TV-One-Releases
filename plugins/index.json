@@ -130,10 +130,10 @@
     {
       "id": "ard-mediathek",
       "name": "ARD Mediathek",
-      "version": 1,
+      "version": 2,
       "script": "ard-mediathek.js",
       "description": "Filme, Serien, Dokus und Livestreams der ARD. Einige Inhalte nur in Deutschland abrufbar.",
-      "sha256": "7cf33f78d8d0b18e897094ac8bad0a362a00c111eeb746d5e0727dcd2dcde62a"
+      "sha256": "60707fa0bb74be34a78fb30b39ab279d26c5ffe55a40e83dba13db9b4a8272eb"
     },
     {
       "id": "youtube-channels",

@@ -17,6 +17,8 @@ function toItem(t) {
   var target = t.links && t.links.target;
   if (!target || !target.href) return null;
   var title = t.shortTitle || t.longTitle || "";
+  // Fassungen mit Audiodeskription/Gebärdensprache doppeln sonst jede Folge in der Liste
+  if (/\((Audiodeskription|Gebärdensprache|mit Gebärdensprache)\)/i.test((t.longTitle || "") + " " + title)) return null;
   var showTitle = t.show && t.show.title ? t.show.title : "";
   switch (t.type) {
     case "ondemand":
