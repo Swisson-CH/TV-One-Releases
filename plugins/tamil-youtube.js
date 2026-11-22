@@ -1,4 +1,13 @@
-// Offizielle Film- und Serienplaylists. Die Wiedergabe öffnet YouTube.
+// Offizielle Playlists und der Einstieg in den tamilischen Einthusan-Katalog.
+var EINTHUSAN_URL = "https://einthusan.tv/movie/browse/?lang=tamil";
+var EINTHUSAN_ITEM = {
+  id: "tamil-einthusan",
+  title: "Einthusan – Tamil",
+  type: "video",
+  subtitle: "Offizieller Filmkatalog · Browser",
+  description: "Öffnet den tamilischen Filmkatalog von Einthusan im Browser."
+};
+
 var COLLECTIONS = [
   { id: "PLwtDKTQpjlC-tRsslfkAaH4bBwi7GekM5", title: "Ayngaran · Ganze Tamil-Filme", films: true },
   { id: "PLKcGe9BTHkrqTvy75IHwpmOmay8rED734", title: "Deivamagal", films: false },
@@ -64,7 +73,7 @@ function loadPlaylist(collection) {
 var plugin = {
   home: function () {
     return [
-      { title: "Tamilische Filme auf YouTube", items: COLLECTIONS.filter(function (entry) { return entry.films; }).map(collectionItem) },
+      { title: "Tamilische Filme", items: COLLECTIONS.filter(function (entry) { return entry.films; }).map(collectionItem).concat([EINTHUSAN_ITEM]) },
       { title: "Tamilische Serien auf YouTube", items: COLLECTIONS.filter(function (entry) { return !entry.films; }).map(collectionItem) }
     ];
   },
@@ -88,15 +97,17 @@ var plugin = {
     if (!key) return [];
     var folders = COLLECTIONS.map(collectionItem);
     var videos = Object.keys(cachedVideos).map(function (id) { return cachedVideos[id]; });
-    return folders.concat(videos).filter(function (item) {
+    return folders.concat([EINTHUSAN_ITEM], videos).filter(function (item) {
       return item.title.toLowerCase().indexOf(key) >= 0;
     }).slice(0, 40);
   },
   details: function (id) {
+    if (id === EINTHUSAN_ITEM.id) return { item: EINTHUSAN_ITEM };
     var item = id.indexOf("tamil-video:") === 0 ? cachedVideos[id.slice(12)] : null;
     return item ? { item: item, backdrop: item.thumbnail } : null;
   },
   streams: function (id) {
+    if (id === EINTHUSAN_ITEM.id) return [{ url: EINTHUSAN_URL, external: true }];
     var video = /^tamil-video:([a-zA-Z0-9_-]{11})$/.exec(id);
     if (video) return [{ url: "https://www.youtube.com/watch?v=" + video[1], external: true }];
     var collection = id.indexOf("tamil-open:") === 0 ? playlist(id.slice(11)) : null;

@@ -20,10 +20,10 @@
     {
       "id": "tamil-youtube",
       "name": "Tamilische Filme und Serien",
-      "version": 1,
+      "version": 2,
       "script": "tamil-youtube.js",
-      "description": "Offizielle Playlists von Ayngaran und VikatanTV. Die Wiedergabe öffnet YouTube.",
-      "sha256": "bceaf3b4a9a3f114ef7893ae94290ac921ec5bf489f76a64813de9df97742bba"
+      "description": "Ayngaran und VikatanTV auf YouTube. Der offizielle Einthusan-Filmkatalog öffnet sich im Browser.",
+      "sha256": "50c1d73c7032b57b3734b82fa553f727d1653fb22d946db99229a2ee746dda2e"
     },
     {
       "id": "demo-open-movies",
@@ -63,7 +63,6 @@
           "label": "Land für «Beliebte Sender»",
           "type": "choice",
           "default": "CH",
-          "hint": "Zeigt die beliebtesten Radiosender dieses Landes.",
           "options": [
             {
               "value": "CH",
@@ -89,14 +88,14 @@
               "value": "GB",
               "label": "Grossbritannien"
             }
-          ]
+          ],
+          "hint": "Zeigt die beliebtesten Radiosender dieses Landes."
         },
         {
           "key": "tag",
           "label": "Eigene Reihe",
           "type": "choice",
           "default": "tamil",
-          "hint": "Zusätzliche Reihe mit Sendern zu diesem Thema.",
           "options": [
             {
               "value": "tamil",
@@ -122,7 +121,8 @@
               "value": "classical",
               "label": "Klassik"
             }
-          ]
+          ],
+          "hint": "Zusätzliche Reihe mit Sendern zu diesem Thema."
         }
       ],
       "sha256": "ca2a837724f25c6c7fa7267034c87d9f98efe4ea1fd4ec9b9eacfac09aec206a"
@@ -187,7 +187,6 @@
           "label": "Netzkino-Land",
           "type": "choice",
           "default": "CH",
-          "hint": "Bestimmt, welche Netzkino-Filme angezeigt werden. Abspielen geht nur im gewählten Land.",
           "options": [
             {
               "value": "CH",
@@ -201,7 +200,8 @@
               "value": "AT",
               "label": "Österreich"
             }
-          ]
+          ],
+          "hint": "Bestimmt, welche Netzkino-Filme angezeigt werden. Abspielen geht nur im gewählten Land."
         }
       ],
       "sha256": "66454a5ba63834a2d256ce9889a59963d3f048aeed52120cfdb9e02de9d56b7c"
