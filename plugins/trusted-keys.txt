@@ -1,0 +1,3 @@
+# Vertrauenswürdige öffentliche Schlüssel für Plugin-Signaturen (eine Zeile pro Schlüssel).
+# Neues Schlüsselpaar: ./gradlew :core:plugin:generatePluginKey
+# Plugins, deren Signatur zu einem dieser Schlüssel passt, gelten in der App als «Verifiziert».

@@ -1,0 +1,138 @@
+{
+  "name": "TV-One Offizielle Plugins",
+  "plugins": [
+    {
+      "id": "arte-mediathek",
+      "name": "ARTE Mediathek",
+      "version": 1,
+      "script": "arte-mediathek.js",
+      "description": "Die deutschsprachige Film- und Serienauswahl von ARTE mit TV-One-Wiedergabe.",
+      "sha256": "285e121f6187c9249e19094ac7ee06b161eb48b8b00ae151c7bb03951742cbb0"
+    },
+    {
+      "id": "zdf-mediathek",
+      "name": "ZDF Mediathek",
+      "version": 1,
+      "script": "zdf-mediathek.js",
+      "description": "ZDF-Filme, Serien mit Staffeln und Folgen sowie Suche und Wiedergabe in TV-One.",
+      "sha256": "78239087a7f46ec55d8e66cb2a6b927a18cd736b2f0bf829ac32c91f0766b4f7"
+    },
+    {
+      "id": "tamil-youtube",
+      "name": "Tamilische Filme und Serien",
+      "version": 1,
+      "script": "tamil-youtube.js",
+      "description": "Offizielle Playlists von Ayngaran und VikatanTV. Die Wiedergabe öffnet YouTube.",
+      "sha256": "bceaf3b4a9a3f114ef7893ae94290ac921ec5bf489f76a64813de9df97742bba"
+    },
+    {
+      "id": "demo-open-movies",
+      "name": "Open Movies (Demo)",
+      "version": 2,
+      "script": "demo-open-movies.js",
+      "description": "Frei lizenzierte Blender-Filme und Test-Streams zum Ausprobieren.",
+      "sha256": "63499ef389edd9c50c30013b20fa4a9f5ac4f20051e126d60a34a3a804c1f49c"
+    },
+    {
+      "id": "iptv-m3u",
+      "name": "IPTV (M3U)",
+      "version": 3,
+      "script": "iptv-m3u.js",
+      "description": "Spielt deine eigene M3U-Playlist (z.B. vom IPTV-Anbieter) ab – inkl. Programmzeitschrift.",
+      "settings": [
+        {
+          "key": "playlistUrl",
+          "label": "Playlist-URL (M3U)"
+        },
+        {
+          "key": "epgUrl",
+          "label": "EPG-URL (XMLTV, optional – sonst aus der Playlist)"
+        }
+      ],
+      "sha256": "f2116f831bc09683571e2e220eddabf05deead528a7ed23f697713d828346676"
+    },
+    {
+      "id": "radio",
+      "name": "Internetradio",
+      "version": 1,
+      "script": "radio.js",
+      "description": "Tausende Radiosender weltweit über radio-browser.info – inkl. tamilischer Sender.",
+      "settings": [
+        {
+          "key": "country",
+          "label": "Land (Ländercode, z.B. CH, DE, IN)",
+          "default": "CH"
+        },
+        {
+          "key": "tag",
+          "label": "Stichwort für eigene Reihe (z.B. tamil, jazz)",
+          "default": "tamil"
+        }
+      ],
+      "sha256": "ca2a837724f25c6c7fa7267034c87d9f98efe4ea1fd4ec9b9eacfac09aec206a"
+    },
+    {
+      "id": "ard-mediathek",
+      "name": "ARD Mediathek",
+      "version": 1,
+      "script": "ard-mediathek.js",
+      "description": "Filme, Serien, Dokus und Livestreams der ARD. Einige Inhalte nur in Deutschland abrufbar.",
+      "sha256": "7cf33f78d8d0b18e897094ac8bad0a362a00c111eeb746d5e0727dcd2dcde62a"
+    },
+    {
+      "id": "youtube-channels",
+      "name": "YouTube-Kanäle",
+      "version": 3,
+      "script": "youtube-channels.js",
+      "description": "Neueste Videos offizieller Kanäle (Tamilisch, Schweiz, Deutschland – je ein Schalter); Wiedergabe in der YouTube-App.",
+      "settings": [
+        {
+          "key": "tamil",
+          "label": "Tamilisch: Sun TV, Vijay Television, Kalaignar TV",
+          "type": "toggle",
+          "default": "true"
+        },
+        {
+          "key": "schweiz",
+          "label": "Schweiz: SRF, SRF News, SRF Dokus, SRF Kids",
+          "type": "toggle",
+          "default": "true"
+        },
+        {
+          "key": "deutsch",
+          "label": "Deutschland: ARD, tagesschau, ZDF, ZDFheute, ZDFinfo Dokus",
+          "type": "toggle",
+          "default": "true"
+        },
+        {
+          "key": "channels",
+          "label": "Weitere Kanal-IDs (UC…, mit Komma getrennt)"
+        }
+      ],
+      "sha256": "397a4119c6bc013a06ab80fadf1d32cbbe33b697e8e389937dac1b5f35d6813e"
+    },
+    {
+      "id": "deccan-delight",
+      "name": "Deccan Delight (Gujal)",
+      "version": 1,
+      "script": "deccan-delight.js",
+      "description": "Die Har-Pal-Geo-Quelle von Deccan Delight mit Serien, Folgen und Suche.",
+      "sha256": "c32e491ff9fb3ad5d5fd870b3d01d825b518c27e1dfff9601974393dd06e0f8d"
+    },
+    {
+      "id": "xstream",
+      "name": "xStream",
+      "version": 1,
+      "script": "xstream.js",
+      "description": "Netzkino und Internet Archive durchsuchen und kompatible Videos in TV-One abspielen.",
+      "settings": [
+        {
+          "key": "netzkinoCountry",
+          "label": "Netzkino-Ländercode (z.B. CH, DE, AT)",
+          "default": "CH"
+        }
+      ],
+      "sha256": "66454a5ba63834a2d256ce9889a59963d3f048aeed52120cfdb9e02de9d56b7c"
+    }
+  ]
+}
